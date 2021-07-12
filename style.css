@@ -58,6 +58,7 @@ hr{
 }
 .blog{
     display: flex;
+    margin-left: 20px;
 }
 .blog .thumnail img{
     width: 177px;
@@ -89,7 +90,7 @@ hr{
     box-shadow: 5px 5px 7px whitesmoke;
     padding-top: 15px;
 }
-.course .course-banner img{
+.course-banner img{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -135,3 +136,35 @@ p{
     margin-right: 5px;
 }
 
+/*----------- media queries---------- */
+
+/* For mobile devices */
+@media only screen and (max-width: 668px) {
+    .container{
+        width: 100%;
+    }
+    .player, .blog, .course{
+        flex-direction: column;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .course .course-banner img{
+        margin-left: 20px;
+    }
+}
+/* For tablet devices */
+@media only screen and (min-width: 668px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .player, .blog, .course{
+        flex-direction: column;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blog, .course-banner img{
+        margin-left: 20px;
+    }
+}
